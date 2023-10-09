@@ -1,35 +1,28 @@
-import Alert from "./Alert";
+import CustomAlert from "./Alert";
 
 export default {
-  component: Alert,
+  component: CustomAlert,
   title: "Alert",
   tags: ["autodocs"],
 };
 
-export const Default = {
+export const Success = {
   args: {
-    alert: {
-      id: "1",
-      title: "Test Alert",
-      state: "ALERT_INBOX",
-    },
+    content: "This is a success alert",
+    severity: "success",
   },
 };
 
-export const Pinned = {
+export const Error = {
   args: {
-    alert: {
-      ...Default.args.alert,
-      state: "ALERT_PINNED",
-    },
+    content: "This is an error alert",
+    severity: "error",
   },
 };
 
-export const Archived = {
+export const Information = {
   args: {
-    alert: {
-      ...Default.args.alert,
-      state: "ALERT_ARCHIVED",
-    },
+    content: "This is an info alert",
+    severity: "info",
   },
 };

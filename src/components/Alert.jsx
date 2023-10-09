@@ -1,7 +1,12 @@
 import React from "react";
+import { Alert } from "@mui/material";
 
-const Alert = () => {
-  return <div>Alert</div>;
+const CustomAlert = ({ content, severity, handleClose }) => {
+  return (
+    <Alert onClose={handleClose} severity={severity} sx={{ width: "100%" }}>
+      {content}
+    </Alert>
+  );
 };
 
-export default Alert;
+export default CustomAlert;
